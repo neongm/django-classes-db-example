@@ -1,0 +1,42 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+
+<div class="container-fluid p-5">
+
+<!--    upper part of the screen-->
+
+    <div class="row">
+        <h5 class="text-center"> probably the hardest lab yet</h5>
+    </div>
+
+<!--    output part on the left-->
+
+    <div class="row">
+        <div class="col m-1 p-2 bg-light border">
+            <h5 class="text-center">output</h5>
+
+
+            <div class="container">
+                {% for article in articles %}
+                <div class="row border p-3 bg-white m-2">
+                    <h4>{{article.title}}</h4>
+                    <p>{{article.text}}</p>
+                    <p>by {{article.author_name}}</p>
+                </div>
+                {% endfor %}
+            </div>
+
+
+        </div>
+
+<!--        input part on the right-->
+
+        <div class="col m-1 p-2 bg-light border">
+            <h5 class="text-center">input</h5>
+        </div>
+    </div>
+
+</div>
+
+{% endblock %}
